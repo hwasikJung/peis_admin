@@ -1,0 +1,28 @@
+server:
+  port: 9090
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json
+    min-response-size: 1024
+  http2:
+    enabled: true
+spring:
+  #DB 설정
+  datasource:
+    #driver-class-name: org.postgresql.Driver
+    #url: jdbc:postgresql://220.76.251.231:5432/sqipg13
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@220.76.251.191:1521:EDW
+    username: BEST
+    password: BEST123!
+  #JSP 바로적용 설정
+  devtools:
+    livereload:
+      enabled: true
+  web:
+    resources:
+      cache:
+        cachecontrol:
+          max-age: 180 #응답 최대 시간
+          must-revalidate: true
+

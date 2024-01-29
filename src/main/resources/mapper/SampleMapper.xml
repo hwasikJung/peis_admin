@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sqisoft.peis_admin.api.sample.mapper.SampleMapper">
+   <select id="selectSampleList" resultType="com.sqisoft.peis_admin.api.sample.dto.SampleDto">
+      select GRP_CODE_ID, GRP_CODE_VAL  from BEST.TB_BEM001_01
+   </select>
+
+</mapper>
+
