@@ -4,7 +4,7 @@ import axios from 'axios';
 const testMode = false;
 
 const api = axios.create({
-  baseURL: testMode ? 'http://localhost:9000' : 'http://localhost:9000',
+  baseURL: testMode ? 'http://localhost:9000' : 'https://api.hnpwa.com/v0/',
 });
 
 export default boot(({ app }) => {

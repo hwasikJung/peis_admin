@@ -10,6 +10,14 @@ const routes = [
       { path: 'breakpoints', component: () => import('pages/Breakpoints.vue') },
       { path: 'flex-grid-1', component: () => import('pages/FlexGird1.vue') },
       {
+        path: 'axios-pinia',
+        component: () => import('pages/Axios-Pinia.vue'),
+      },
+      {
+        path: 'Count-Pinia',
+        component: () => import('pages/Count-Pinia.vue'),
+      },
+      {
         path: 'profile',
         component: () => import('pages/profile/ProfilePage.vue'),
         children: [

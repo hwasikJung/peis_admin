@@ -122,6 +122,18 @@ const linksList = [
     icon: 'school',
     to: '/quasar-language-pack',
   },
+  {
+    title: 'Axios Pinia',
+    caption: 'quasar.dev',
+    icon: 'school',
+    to: '/axios-pinia',
+  },
+  {
+    title: 'Count Pinia',
+    caption: 'quasar.dev',
+    icon: 'school',
+    to: '/Count-Pinia',
+  },
 ];
 </script>
 
