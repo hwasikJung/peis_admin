@@ -1,6 +1,5 @@
-import enUS from './en-US';
-import koKR from './ko-KR';
+import enUS from './en-US'
+
 export default {
-  'en-US': enUS,
-  'ko-KR': koKR,
-};
+  'en-US': enUS
+}

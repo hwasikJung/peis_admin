@@ -11,8 +11,7 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title> {{ $t('productName') }} </q-toolbar-title>
-        <q-btn stretch flat label="Sub Layout" to="/sub" />
+        <q-toolbar-title> 건물성능개선사업 </q-toolbar-title>
         <div>
           <q-btn
             flat
@@ -24,14 +23,10 @@
           <!--          <q-btn flat round dense icon="dark_mode" />-->
           <q-btn round size="sm" class="q-mr-md">
             <q-avatar size="42px">
-              <img src="/icons/favicon-128x128.png" />
+              <img src="/avatar-bg.svg" />
             </q-avatar>
             <q-menu :offset="[0, 10]">
               <q-list style="min-width: 100px">
-                <q-separator />
-                <q-item clickable v-close-popup to="/profile">
-                  <q-item-section>프로필</q-item-section>
-                </q-item>
                 <q-separator />
                 <q-item clickable v-close-popup to="/auth/sign-in">
                   <q-item-section>로그아웃</q-item-section>
@@ -45,12 +40,7 @@
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <q-item-label header>
-          <q-avatar class="q-mr-sm" size="lg">
-            <img src="/icons/favicon-128x128.png" />
-          </q-avatar>
-          <span>Quasar v{{ $q.version }}</span>
-        </q-item-label>
+        <q-item-label header> 페이지 구성 리스트 </q-item-label>
 
         <EssentialLink
           v-for="link in essentialLinks"
@@ -69,80 +59,25 @@
 <script>
 const linksList = [
   {
-    title: 'Typography',
-    caption: 'quasar.dev',
-    icon: 'school',
-    to: '/typography',
+    title: "Dash Board",
+    caption: "대시보드 페이지",
+    icon: "school",
+    to: "/dash-board",
   },
   {
-    title: 'Colors',
-    caption: 'quasar.dev',
-    icon: 'school',
-    to: '/colors',
-  },
-  {
-    title: 'Spacing',
-    caption: 'quasar.dev',
-    icon: 'school',
-    to: '/spacing',
-  },
-  {
-    title: 'Breakpoints',
-    caption: 'quasar.dev',
-    icon: 'school',
-    to: '/breakpoints',
-  },
-  {
-    title: 'Classes & Variables',
-    caption: 'quasar.dev',
-    icon: 'school',
-    to: '/classes-variables',
-  },
-  {
-    title: 'Flex Grid 1',
-    caption: 'quasar.dev',
-    icon: 'school',
-    to: '/flex-grid-1',
-  },
-  {
-    title: 'Form Handling',
-    caption: 'quasar.dev',
-    icon: 'school',
-    to: '/form-handling',
-  },
-  {
-    title: 'Quasar Utils',
-    caption: 'quasar.dev',
-    icon: 'school',
-    to: '/quasar-utils',
-  },
-  {
-    title: 'Quasar Language Pack',
-    caption: 'quasar.dev',
-    icon: 'school',
-    to: '/quasar-language-pack',
-  },
-  {
-    title: 'Axios Pinia',
-    caption: 'quasar.dev',
-    icon: 'school',
-    to: '/axios-pinia',
-  },
-  {
-    title: 'Count Pinia',
-    caption: 'quasar.dev',
-    icon: 'school',
-    to: '/Count-Pinia',
+    title: "Sign In",
+    caption: "로그인",
+    icon: "school",
+    to: "/sign-in",
   },
 ];
 </script>
 
 <script setup>
-import { computed, defineComponent, ref } from 'vue';
-import EssentialLink from 'components/EssentialLink.vue';
-import { useQuasar } from 'quasar';
-import { useI18n } from 'vue-i18n';
-const { t } = useI18n();
+import { computed, ref } from "vue";
+import EssentialLink from "components/EssentialLink.vue";
+import { useQuasar } from "quasar";
+
 const $q = useQuasar();
 
 const leftDrawerOpen = ref(false);
@@ -151,15 +86,11 @@ const toggleLeftDrawer = () => {
   leftDrawerOpen.value = !leftDrawerOpen.value;
 };
 const darkModeIcon = computed(() =>
-  $q.dark.isActive ? 'dark_mode' : 'light_mode',
+  $q.dark.isActive ? "dark_mode" : "light_mode",
 );
-// const init = () => {
-//   const darkMode = $q.localStorage.getItem('darkMode');
-//   $q.dark.set(darkMode);
-// };
-// init();
+
 const toggleDarkMode = () => {
   $q.dark.toggle();
-  $q.localStorage.set('darkMode', $q.dark.isActive);
+  $q.localStorage.set("darkMode", $q.dark.isActive);
 };
 </script>

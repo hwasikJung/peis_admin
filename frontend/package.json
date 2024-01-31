@@ -1,9 +1,9 @@
 {
-  "name": "PEIS_ADMIN_FRONTEND",
+  "name": "peis_admin",
   "version": "0.0.1",
-  "description": "A Quasar Project",
-  "productName": "PEIS",
-  "author": "hagrune <iruel@hanmail.net>",
+  "description": "건물성능 개선사업",
+  "productName": "건물성능 개선사업",
+  "author": "hwasikJung <hs.jung@sqisoft.com>",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue ./",
@@ -15,20 +15,19 @@
   "dependencies": {
     "@quasar/extras": "^1.16.9",
     "axios": "^1.6.7",
-    "copy-webpack-plugin": "^12.0.2",
-    "less": "^4.2.0",
     "pinia": "^2.1.7",
     "quasar": "^2.14.3",
     "vue": "^3.4.15",
-    "vue-i18n": "^9.9.0",
+    "vue-i18n": "^9.9.1",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
+    "@intlify/unplugin-vue-i18n": "^2.0.0",
     "@quasar/app-vite": "^1.7.3",
     "autoprefixer": "^10.4.17",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-vue": "^9.20.1",
+    "eslint-plugin-vue": "^9.21.0",
     "postcss": "^8.4.33",
     "prettier": "^3.2.4"
   },

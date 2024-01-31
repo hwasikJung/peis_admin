@@ -20,17 +20,17 @@ defineProps({
 
   caption: {
     type: String,
-    default: '',
+    default: "",
   },
 
   to: {
     type: String,
-    default: '#',
+    default: "#",
   },
 
   icon: {
     type: String,
-    default: '',
+    default: "",
   },
 });
 </script>
